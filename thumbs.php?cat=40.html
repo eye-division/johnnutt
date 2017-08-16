@@ -16,12 +16,9 @@ permalink: /thumbs.php?cat=40.html
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css" />
-<style type="text/css" media="screen">
-<!--
-    @import url("css/artist.css");
--->
-</style>
+<link rel="stylesheet" type="text/css" media="screen" href="/css/artist.css" />
 
+<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div id="header">
@@ -30,29 +27,31 @@ permalink: /thumbs.php?cat=40.html
 <div id="topnav"><a href="index.php.html" title="Return to the home page" accesskey="1">Home</a> | <a href="thumbs.php%3Fcat=34.html" title="View 4 thumbnail images for About">About</a> | <a href="thumbs.php%3Fcat=38.html" title="View 16 thumbnail images for Drawing">Drawing</a> | <a href="thumbs.php%3Fcat=35.html" title="View 16 thumbnail images for Landscape painting">Landscape painting</a> | <a href="thumbs.php%3Fcat=44.html" title="View 18 thumbnail images for Narrative Painting ">Narrative Painting </a> | <a class="selected" href="thumbs.php%3Fcat=40.html" title="Contact">Contact</a></div>    <div id="container">
 	<div id="content">Contact form<div id="page"><p><p>&nbsp;<span style="font-size: medium;"><span style="color: rgb(0, 0, 255);">Contact</span></span></p>
 <p><span style="font-size: medium;">Prices of original works on canvas, photos or drawings vary.&nbsp;&nbsp;Some images can also be purchased as a fine art print but this will require a quote.&nbsp;</span><span style="font-size: medium;">I welcome comissions. My studio is now located within the&nbsp;<a href="http://www.theoldbrickworkshop.com/">Oldbrickworkshop,&nbsp;</a>Wellington Somerset TA21 9HW. This will be open during <a href="http://somersetartworks.org.uk/openstudios16/">Somerset, Open Studios weeks</a>.</span></p></p></div>
-
+<!--
+<input type="hidden" name="_to" value="jh.nutt@which.net">
+            <input type="hidden" name="_cc" value="a.ward@eyedivision.com">
+-->
 <form action="/thanks/" method="post" id="contact-form">
 
       <fieldset>
 
-            <input type="hidden" name="_to" value="jh.nutt@which.net">
-            <input type="hidden" name="_cc" value="a.ward@eyedivision.com">
-            <input type="hidden" name="_subject" value="Web form">
-            <p>
-            <label for="name">Name:</label>
-            <input type="text" name="name">
-            </p>
-            <p>
-            <label for="_replyto">Email:</label>
-            <input type="text" name="_replyto">
-            </p>
-            <p>
-            <label>Message</label>
-            <textarea name="message"></textarea>
-            </p>
-            {% if site.recaptcha_site_key %}
-            <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key }}"></div>
-            {% endif %}
+        <input type="hidden" name="_to" value="a.ward@eyedivision.com">
+        <input type="hidden" name="_subject" value="Web form">
+        <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        </p>
+        <p>
+        <label for="_replyto">Email:</label>
+        <input type="text" name="_replyto">
+        </p>
+        <p>
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        </p>
+        {% if site.recaptcha_site_key %}
+        <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key }}"></div>
+        {% endif %}
         <p>
             <input type="submit" value="Send message">
             </p>
