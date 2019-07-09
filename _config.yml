@@ -1,13 +1,13 @@
-# External gems
-gems:
-  - jekyll-sitemap
-
-exclude:
-  - "/vendor/"
+plugins:
+ # - jekyll-archives # Sorry, not GitHub pages friendly!
+ # - jekyll-assets
+ # - autoprefixer-rails
+   - jekyll-seo-tag
+   - jekyll-sitemap
 
 # Site settings
 title: John Nutt
-subtitle: John Nutt Eye Gallery built on Bourbon and Neat
+subtitle: John Nutt Eye Gallery
 name: John Nutt
 description: John Nutt eye gallery
 # Base URL of site (i.e. /blog). It should always start with a slash,
@@ -15,7 +15,7 @@ description: John Nutt eye gallery
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "http://www.john-nutt.co.uk/"
+url: "https://www.john-nutt.co.uk/"
 logo: "/siteicon.png"
 email: a.ward@eyedivision.com
 
